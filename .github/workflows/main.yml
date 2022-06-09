@@ -26,9 +26,10 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - run: cd test
-      - run: mvn package
-      - run: mkdir staging && cp target/*.jar staging
+      - run: |
+          cd test
+          mvn package
+          mkdir staging && cp target/*.jar staging
       - uses: actions/upload-artifact@v3
         with:
           name: Package
