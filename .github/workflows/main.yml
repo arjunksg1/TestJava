@@ -28,5 +28,5 @@ jobs:
           mvn package          
       - uses: actions/upload-artifact@v3
         with:
-          name: Package
-          path: test/target     
+          name: jars
+          path: test/target/testJava.jar     
